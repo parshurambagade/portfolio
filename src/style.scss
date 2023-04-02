@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/************ VARIABLES ******************/
+$color-bg: black;
+$color-bg-variant: #2c2c6c;
+$color-primary: #19A7CE;
+$color-primary-variant: #146C94;
+$color-white: #F6F1F1;
+$color-light: rgba(255, 255, 255, 0.6);
+
+$transition: all 400ms ease;
+
+
+
+
+/******************* MIXINS **************************/
+@mixin tv {
+    @media screen and (min-width:1201px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width:1200px){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width:1024px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media screen and (max-width:320px){
+        @content;
+    }
+}
+
+
+
+
+/********************* PLACEHOLDERS *****************************/
+%button{
+    width:max-content;
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    color:$color-primary;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    transition: $transition;
+    
+    &:hover{
+        color: $color-bg;
+        background: $color-white;
+        border-color:transparent;
+    }
+}
+
+
+%button-primary{
+    background: $color-primary;
+    color:$color-bg;
+}
+
+
+
+
+/********************* GENERAL STYLING *****************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}    
+
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+
+
+    @include desktop(){
+        font-size: 100%;
+    }
+    @include laptop(){
+        font-size: 90%;
+    }
+    @include tablet(){
+        font-size: 75%;
+    }
+    @include mobile(){
+        // font-size: 60%;
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background: $color-bg;
+    color: $color-white;
+    line-height:1.7;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("./img/bg-texture.png");
+}
+
+
+h1,h2,h3,h4,h5{
+    font-weight: 500;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+section{
+    height: 100vh;
+    padding:0 7rem;
+    margin-top:8rem;
+}
+
+
+section > h2, section > h5{
+    text-align: center;
+    color:$color-light;
+}
+
+section > h2 {
+    margin-bottom: 3rem;
+    color: $color-primary;
+}
+
+a{
+    color: $color-primary;
+    transition: $transition;
+    
+    &:hover{
+        color: $color-white;
+    }
+}   
+
+
+
+
+

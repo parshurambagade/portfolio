@@ -1,0 +1,36 @@
+@import "../../../style.scss";
+
+.cta{
+    display: flex;
+    gap:2rem;
+    // justify-content: flex-start;
+    width: 100%;
+
+    .btn{
+        @extend %button;
+        
+        @include mobile(){
+            width:70%;
+        }
+        @include small-mobile(){
+            width:100%;
+        }
+    }
+
+    .btn-primary{
+        @extend %button-primary;
+    }
+
+
+    @include tablet(){
+        justify-content: center; 
+        margin-bottom: 2rem;   
+    }
+    @include mobile(){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:80%;
+        margin:auto;
+    }
+}

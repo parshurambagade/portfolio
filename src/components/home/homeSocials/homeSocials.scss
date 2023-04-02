@@ -1,0 +1,14 @@
+@import "../../../style.scss";
+
+.header-socials{
+    display: flex;
+    gap:4rem;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    a{
+        color:#D8E6EC;
+        &:hover{
+            color:$color-primary;
+        }
+    }
+}
