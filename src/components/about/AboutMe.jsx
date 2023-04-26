@@ -1,11 +1,14 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import Me from '../../img/parshu.png';
+// import {FaAward} from "react-icons/fa";
+// import {FiUsers} from "react-icons/fi";
+// import {VscFolderLibrary} from "react-icons/vsc";
 import HomeSocials from "../home/homeSocials/HomeSocials"
 import "./about.scss";
-const About = () => {
-    return (
-        <section id="about">
+
+const AboutMe = () => {
+  return (
+    <section id="about">
       {/* <h5>Get To Know</h5>
       <h2>About Me</h2> */}
       {/* <div className="container about_container">
@@ -66,16 +69,16 @@ const About = () => {
           <h3>Parshuram Bagade</h3>
           <h5>Fullstack Web Developer</h5>
           <HomeSocials />
-          <div className="about-btns">
-            <Link className="btn" to="/projects">Projects</Link>
-            <Link className="btn" to="/skills">Skills</Link>
-            <Link className="btn" to="/contact">Contact Me</Link>
-          </div>
+          {/* <div className="about-btns">
+            <a className="btn" href="#">Projects</a>
+            <a className="btn" href="#">Skills</a>
+            <a className="btn" href="#">Contact Me</a>
+          </div> */}
         </div>
       </div>
 
     </section>
-    )
+  )
 }
 
-export default About
+export default AboutMe

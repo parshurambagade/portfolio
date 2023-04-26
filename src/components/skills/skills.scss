@@ -1,0 +1,299 @@
+@import "../../style.scss";
+
+#skills{
+    margin-top:5rem;
+
+    @include mobile(){
+        margin: 5rem 1rem 10rem;
+    }
+
+    h5{
+        font-size: 1rem;
+
+        @include mobile(){
+            font-size: 1.1rem;
+        }
+    }
+    h2{
+        text-align: center;
+        // text-decoration:underline;   
+        // text-decoration-style: dotted;
+        // border:1px dotted $color-white;
+        // width: max-content;
+        // display: block;
+        // margin:2rem auto;
+        // padding:.5rem 1rem;
+        font-size: 2rem;
+
+        @include tablet(){
+            color:$color-primary;
+        }
+        
+    }
+
+    .skills-container{
+        display: flex;
+        // justify-content: space-between;
+        margin-top:1rem;
+        justify-content: center;
+
+        @include tablet(){
+            flex-direction: column;
+        }
+
+        @include mobile(){
+            margin-top:0;
+        }
+
+        .frontend-container{
+            width:48%;
+            // background:$color-bg-variant;
+            padding-bottom:2rem;
+            border-radius: 0.5rem;
+            border-right: 1px solid $color-white;
+            // padding:0 1rem 0 0;
+            
+            @include tablet(){
+                width:100%;
+                border:none;
+            }
+
+            h3{
+                text-align: center;
+                color:$color-white;
+                margin:1rem;
+                font-size: 1.3rem;
+
+                @include mobile(){
+                    font-size: 1.4rem;
+                }
+            }
+            .frontend-skills{
+                display: flex;
+                flex-wrap: wrap;
+                gap:1rem;
+                justify-content: center;
+                .frontend-skill{
+                    display: flex;
+                    padding:1rem;
+                    gap:1rem;
+                    align-items: center;
+                    border-radius: 0.5rem;
+                    width: 40%;
+                    background:$color-bg-variant;
+                    // height:max-content;
+                    border:1px solid $color-white;
+
+                    &:hover{
+                        background: #1f1f38;
+                    }
+
+                    @include laptop(){
+                        padding:1rem 0.5rem;
+                        width:45%;
+                    }
+                    
+                    @include tablet(){
+                        flex-direction: column;
+                        text-align: center;
+                        width:25%;
+                    }
+
+                    @include mobile(){
+                        width:40%;
+                        padding:1.5rem 2rem;
+                    }
+
+                    @include small-mobile(){
+                        // width:40%;
+                        padding:1.5rem 1rem;
+                    }
+
+                    .skill-icon{
+                        // font-size: 3rem;
+                        color: $color-primary;
+                        width:30%;
+                        display: flex;
+                        align-items: center;
+                        // border-right:1px solid white;
+
+                        @include laptop(){
+                            width:50%;
+                        }
+
+                        @include tablet(){
+                            width:40%;
+                        }
+
+                        img{
+                            width:100%;
+                            
+                        }
+                    }
+                    .skill-content{
+                        // padding:2rem;
+                        // height:100%;
+                        width:70%;
+
+                        @include laptop(){
+                            display: flex;
+                            flex-direction: column;
+                            // align-items: center;
+                            justify-content: center;
+                        }
+                        @include tablet(){
+                            width:80%;
+                        }
+
+                        h4{
+                            font-size: 1rem;
+
+                            @include mobile(){
+                                font-size: 1.2rem;
+                            }
+                        }
+                        p{
+                            font-size: 0.8rem;
+                            color: $color-light;
+
+                            @include mobile(){
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .backend-container{
+            width:48%;
+            // background:$color-bg-variant;
+            padding-bottom:2rem;
+            border-radius: 0.5rem;
+            border-left: 1px solid $color-light;
+            // padding:0 0 0 1rem;
+
+            @include tablet(){
+                width:100%;
+                border:none;
+            }
+
+            @include mobile(){
+                margin-bottom:12rem;
+            }
+
+            h3{
+                text-align: center;
+                color:$color-white;
+                margin:1rem;
+                font-size: 1.3rem;
+
+                @include mobile(){
+                    font-size: 1.4rem;
+                }
+            }
+
+            .backend-skills{
+                display: flex;
+                flex-wrap: wrap;
+                gap:1rem;
+                justify-content: center;
+                .backend-skill{
+                    display: flex;
+                    padding:1rem;
+                    // justify-content:space-between;
+                    gap:1rem;
+                    align-items: center;
+                    border-radius: 0.5rem;
+                    width:40%;
+                    background:$color-bg-variant;
+                    // height:max-content;
+                    border:1px solid $color-white;
+
+                    &:hover{
+                        background: #1f1f38;
+                    }
+
+                    @include laptop(){
+                        // flex-direction: column;
+                        // text-align: center;
+                        padding:1rem 0.5rem;
+                        width:45%;
+                        // align-items: center;
+                        // justify-content: center;
+                    }
+
+                    @include tablet(){
+                        flex-direction: column;
+                        text-align: center;
+                        width:25%;
+                    }
+
+                    @include mobile(){
+                        width:40%;
+                        padding:1.5rem 2rem;
+                    }
+                    @include small-mobile(){
+                        // width:40%;
+                        padding:1.5rem 1rem;
+                    }
+
+                    .skill-icon{
+                        // font-size: 3rem;
+                        color: $color-primary;
+                        width:30%;
+                        display: flex;
+                        align-items: center;
+                        // border-right:1px solid white;
+
+                        @include laptop(){
+                            width:50%;
+                        }
+
+                        @include tablet(){
+                            width:40%;
+                        }
+
+                        img{
+                            width:100%;
+                            
+                        }
+                    }
+                    .skill-content{
+                        // padding:2rem;
+                        height:100%;
+                        width:70%;
+
+                        @include laptop(){
+                            display: flex;
+                            flex-direction: column;
+                            // align-items: center;
+                            justify-content: center;
+                        }
+
+                        @include tablet(){
+                            width:80%;
+                        }
+
+                        h4{
+                            font-size: 1rem;
+
+                            @include mobile(){
+                                font-size: 1.2rem;
+                            }
+                        }
+                        p{
+                            font-size: 0.8rem;
+                            color: $color-light;
+
+                            @include mobile(){
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

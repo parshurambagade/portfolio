@@ -5,6 +5,11 @@
     gap:4rem;
     justify-content: space-between;
     font-size: 1.2rem;
+
+    @include mobile(){
+        margin:1rem;
+        font-size: 1.5rem;
+    }
     a{
         color:#D8E6EC;
         &:hover{

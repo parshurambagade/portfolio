@@ -3,8 +3,10 @@
 /************ VARIABLES ******************/
 $color-bg: black;
 $color-bg-variant: #2c2c6c;
-$color-primary: #19A7CE;
+// $color-primary: #19A7CE;
+$color-primary: #4db5ff;
 $color-primary-variant: #146C94;
+// $color-primary-variant: rgba(77, 181, 255, 0.4);
 $color-white: #F6F1F1;
 $color-light: rgba(255, 255, 255, 0.6);
 
@@ -73,6 +75,7 @@ $transition: all 400ms ease;
 
 
 %button-primary{
+    @extend %button;
     background: $color-primary;
     color:$color-bg;
 }
@@ -119,9 +122,9 @@ html {
 body{
     background: $color-bg;
     color: $color-white;
-    line-height:1.7;
+    // line-height:1.7;
     font-family: 'Poppins', sans-serif;
-    background-image: url("./img/bg-texture.png");
+    // background-image: url("../src/img/bg-texture.png");
 }
 
 
@@ -137,6 +140,21 @@ section{
     height: 100vh;
     padding:0 7rem;
     margin-top:8rem;
+
+    @include laptop{
+        padding: 0 4rem;
+    }
+
+    @include tablet(){
+        padding: 0 3rem;
+    }
+    @include mobile(){
+        padding: 0 1rem 7rem;
+    }
+
+    @include small-mobile(){
+        padding:0 0.5rem;
+    }
 }
 
 

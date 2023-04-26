@@ -1,0 +1,263 @@
+@import "../../style.scss";
+
+#about{
+    // margin-bottom: 2rem;
+    // overflow-y:hidden;
+    padding:1rem;
+    position: relative;
+    // display: none;
+    margin: 5rem 7rem;
+    height:max-content;
+    // z-index: 0;
+    @include mobile(){
+        margin:5rem 1rem 14rem;
+        padding:0.5rem;
+    }
+    
+    h5{
+        text-align: center;
+        color:$color-light;
+        font-size: 1.1rem;
+        // color:$color-light;
+    }
+    h2{
+        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        text-align: center;
+        color:$color-white;
+
+        @include mobile(){
+            font-size: 2rem;
+        }
+    }
+
+    .about-container{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        align-items: center;
+        // padding:1.5rem;
+        justify-content: center;
+
+        @include mobile(){
+            display: flex;
+            flex-direction:column-reverse;
+        }
+        
+        .about-text{
+            width:60%;
+            // background: linear-gradient($color-bg-variant, transparent);
+            padding:1rem;
+            border-radius: 1rem;
+            font-size: 1.1rem;
+            // margin-left: 10rem;
+            text-align: justify;
+
+            @include mobile(){
+                padding:1rem;
+                font-size: 1.2rem;
+                text-align: justify;
+                width:100%;
+            }
+            p{
+                span{
+                    color:$color-primary;
+                }
+            }
+        }
+        .about-img{
+            width:40%;
+            display: flex;
+            flex-direction: column;
+            // gap:1rem;
+            align-items: center;
+            justify-content:flex-start;
+            // margin:auto;
+            // height:10%;
+            // justify-self: flex-end;
+            // margin-left: 0;
+            // margin-top: 0;
+            // background: linear-gradient($color-bg-variant, transparent);
+            // border:1px solid $color-light;
+            // background: $color-bg-variant;
+            // backdrop-filter: blur(10px);
+            padding:1rem;
+            border-radius:2rem;
+            // border-bottom:1px solid $color-primary;                  
+            // position: fixed;   
+            // left:2rem;
+            // top:35%;   
+                 
+        
+            @include mobile(){
+                width:90%;  
+                background:none;
+                // border:1px solid $color-primary;
+                border-bottom: none;
+                padding:1rem;
+                // display: none;
+            }                                                                 
+
+            img{
+                border:2px solid $color-light;
+                border-radius: 50%;
+                // height:10rem;
+                width:50%;
+            }
+            h3{
+                font-size: 1.3rem;
+                margin-top: 0.8rem;
+                text-align: center;
+                color:$color-primary;
+
+                @include mobile(){
+                    font-size: 1.8rem;
+                }
+            }
+            h5{
+                color:$color-light;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                text-align: center;
+
+                @include mobile(){
+                    font-size: 1.3rem;
+                }
+            }
+
+            .about-btns{
+                margin:2rem 1rem;
+                display: flex;
+                flex-direction: column;
+                gap:1rem;
+                width:80%;
+
+                @include mobile(){
+                    display: none;
+                }
+                .btn{
+                    @extend %button;
+                    width:80%;
+                    display: flex;
+                    margin: auto;
+                    justify-content: center;
+                    background:$color-bg-variant;
+                    color:white;
+
+                    &:hover{
+                        background: transparent;
+                        color:$color-primary;
+                        border-color: $color-primary;
+                    }
+
+                }
+            }
+            
+        }
+    }
+}
+
+
+// .about-left-container{
+//     display: flex;
+//     flex-direction: column;
+//     gap:2rem;
+//     justify-content: center;
+//     width:40%;
+// }
+// .about_me{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: center;
+//     // width: 100%;
+//     /* flex: 1; */
+//     height: max-content;
+//     /* aspect-ratio: 1/1; */
+//     border-radius: 2rem;
+//     background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+// }
+
+// .about_me-img{
+//     border-radius: 2rem;
+//     transform: rotate(10deg);
+//     overflow: hidden;
+//     transition: var(--transition);
+//     justify-self: center;
+// }
+
+// .about_me-img:hover{
+//     transform:rotate(0deg);
+// }
+
+// .about-btn{
+//     display: inline-block;
+//     margin:1rem auto;
+// }
+
+// .about-right-container{
+//     display: flex;
+//     width: 60%;
+// }
+
+// .about_content{
+//     width:100%;
+// }
+// .about_cards{
+//     display: flex;
+//     width: 100%;
+//     /* flex:1; */
+//     align-items: center;
+//     /* border: 1px solid var(--color-primary); */
+//     justify-content:space-evenly;
+//     flex-wrap: wrap;
+//     gap:3rem;
+// }
+
+// .about_card{
+//     background: var(--color-bg-variant);
+//     /* width:100%; */
+//     width: 40%;
+//     border: 1px solid transparent;
+//     border-radius: 1rem;
+//     padding:1rem;
+//     text-align: center;
+//     transition: var(--transition);
+//     min-width: 116px;
+// }
+
+// #third-about-card{
+//     display: inline-block;
+//     margin:auto;
+// }
+
+// .about_card:hover{
+//     background: transparent;
+//     border:2px solid var(--color-bg-variant);
+//     cursor: default;
+// }
+
+// .about_icons{
+//     color: var(--color-primary);
+//     margin-bottom: 1rem;
+//     font-size: 1.4rem;
+// }
+
+// .about_card h5{
+//     font-size: 0.95rem;
+// }
+
+// .about_card small{
+//     font-size: 0.7rem;
+//     color:var(--color-light);
+// }
+
+// .about_content p{
+//     margin:2rem 0 2.6rem;
+//     color:var(--color-light);
+// }
+
+
+
+
+/*####################### MEDIA QUERIES ###########################*/
